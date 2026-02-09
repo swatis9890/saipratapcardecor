@@ -39,7 +39,7 @@ document.getElementById("serviceImage").src = services[key].img;
 let message = "I want " + services[key].title + " service from Sai Pratap Car Decor";
 
 document.getElementById("serviceWhatsapp").href =
-"https://wa.me/919876543210?text=" + encodeURIComponent(message);
+"https://wa.me/919823195752?text=" + encodeURIComponent(message);
 
 document.getElementById("overlay").style.display = "block";
 }
@@ -60,5 +60,5 @@ Name: ${name}
 Phone: ${phone}
 Service: ${msg}`;
 
-window.open("https://wa.me/919876543210?text=" + encodeURIComponent(text), "_blank");
+window.open("https://wa.me/919823195752?text=" + encodeURIComponent(text), "_blank");
 }
