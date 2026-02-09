@@ -6,21 +6,17 @@
 
 <title>Sai Pratap Car Decor</title>
 
-<meta name="description" content="Premium car accessories & customization in Pune — detailing, ambient lighting, audio systems, wrapping & interiors by Sai Pratap Car Decor.">
-<meta name="keywords" content="car decor Pune, car customization, car detailing, ambient lighting, car wrapping, accessories">
-<meta name="author" content="Sai Pratap Car Decor">
+<meta name="description" content="Premium car accessories and customization in Pune by Sai Pratap Car Decor.">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Floating WhatsApp -->
 <div class="whatsapp">
 <a href="https://wa.me/919823195752" target="_blank">💬</a>
 </div>
 
-<!-- HERO -->
 <header class="hero">
 <video autoplay muted loop class="bg-video">
 <source src="images/bg.mp4" type="video/mp4">
@@ -33,7 +29,6 @@
 </div>
 </header>
 
-<!-- SERVICES -->
 <section id="services" class="services">
 <h2>Premium Services</h2>
 <div class="cards">
@@ -46,18 +41,23 @@
 </div>
 </section>
 
-<!-- SERVICE POPUP -->
-<section class="service-popup" id="servicePopup">
-<div class="popup-content">
-<h2 id="serviceTitle"></h2>
-<img id="serviceImage">
-<p id="serviceText"></p>
-<a id="serviceWhatsapp" class="cta" target="_blank">Enquire on WhatsApp</a>
-<button onclick="closeService()">Close</button>
-</div>
-</section>
+<!-- POPUP OVERLAY -->
+<div class="overlay" id="overlay" onclick="closeService()">
+<div class="popup" onclick="event.stopPropagation()">
 
-<!-- GALLERY -->
+<h2 id="serviceTitle"></h2>
+
+<img id="serviceImage">
+
+<p id="serviceText"></p>
+
+<a id="serviceWhatsapp" class="cta" target="_blank">Enquire on WhatsApp</a>
+
+<button class="close-btn" onclick="closeService()">✖ Close</button>
+
+</div>
+</div>
+
 <section class="gallery">
 <h2>Transformations</h2>
 <div class="gallery-grid">
@@ -72,15 +72,13 @@
 </div>
 </section>
 
-<!-- STATS -->
 <section class="stats">
 <div>500+ Cars Customized</div>
 <div>300+ Happy Clients</div>
 <div>5+ Years Experience</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
+<section class="contact">
 <h2>Send Enquiry</h2>
 
 <form onsubmit="sendWhatsApp(event)">
@@ -89,11 +87,6 @@
 <textarea id="message" placeholder="Service Required"></textarea>
 <button type="submit">Send via WhatsApp</button>
 </form>
-
-<p>📍 Serving premium car customization in Pune and nearby areas.</p>
-
-<h3>Visit Our Shop</h3>
-<iframe src="https://www.google.com/maps?q=Sai%20Pratap%20Car%20Decor&output=embed"></iframe>
 
 <h3>Our Team</h3>
 <div class="team">
@@ -105,16 +98,5 @@
 <footer>© 2026 Sai Pratap Car Decor</footer>
 
 <script src="script.js"></script>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-ScrollReveal().reveal('.card, .gallery-grid img, .stats div, .before-after', {
-distance:'60px',
-duration:900,
-origin:'bottom',
-interval:120
-});
-</script>
-
 </body>
 </html>
