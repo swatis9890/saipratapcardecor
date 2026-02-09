@@ -1,46 +1,59 @@
 const services = {
  detailing:{
   title:"Car Detailing & Polishing",
-  text:"Complete deep cleaning, foam wash, polishing and ceramic coating.",
-  video:"images/detailing.mp4"
+  text:"Complete deep cleaning, foam wash, polishing and ceramic coating for showroom shine.",
+  img:"images/detailing.jpg"
  },
  lighting:{
   title:"Ambient LED Lighting",
-  text:"Luxury LED lighting with professional installation.",
-  video:"images/lighting.mp4"
+  text:"Luxury ambient lighting with professional installation and color modes.",
+  img:"images/lighting.jpg"
  },
  audio:{
   title:"Audio Systems",
   text:"Premium speakers, subwoofers and infotainment upgrades.",
-  video:"images/audio.mp4"
+  img:"images/audio.jpg"
  },
  wrapping:{
   title:"Car Wrapping",
-  text:"Matte, gloss and carbon wraps for full transformation.",
-  video:"images/wrapping.mp4"
+  text:"Matte, gloss and carbon fiber wraps for full exterior transformation.",
+  img:"images/wrapping.jpg"
  },
  interior:{
   title:"Seat Covers & Interior Mods",
-  text:"Luxury leather seats and dashboard styling.",
-  video:"images/interior.mp4"
+  text:"Luxury leather seating and dashboard enhancements.",
+  img:"images/interior.jpg"
  },
  accessories:{
   title:"Car Accessories",
-  text:"Premium accessories with perfect finish.",
-  video:"images/accessories.mp4"
+  text:"Premium accessories professionally installed with perfect finish.",
+  img:"images/accessories.jpg"
  }
 };
 
 function openService(key){
- document.getElementById("serviceTitle").innerText = services[key].title;
- document.getElementById("serviceText").innerText = services[key].text;
+document.getElementById("serviceTitle").innerText = services[key].title;
+document.getElementById("serviceText").innerText = services[key].text;
+document.getElementById("serviceImage").src = services[key].img;
 
- let video = document.getElementById("serviceVideo");
- video.src = services[key].video;
- video.load();
+document.getElementById("serviceWhatsapp").href =
+"https://wa.me/91XXXXXXXXXX?text=I%20want%20"+services[key].title;
 
- document.getElementById("serviceWhatsapp").href =
- "https://wa.me/91XXXXXXXXXX?text=I%20want%20"+services[key].title;
+document.getElementById("servicePopup").style.display="block";
+}
 
- document.getElementById("servicePopup").style.display="block";
+function closeService(){
+document.getElementById("servicePopup").style.display="none";
+}
+
+function sendWhatsApp(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let msg = document.getElementById("message").value;
+
+let text = `Hello Sai Pratap Car Decor,%0AName: ${name}%0APhone: ${phone}%0AService: ${msg}`;
+
+window.open(`https://wa.me/91XXXXXXXXXX?text=${text}`, "_blank");
 }
