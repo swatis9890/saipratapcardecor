@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sai Pratap Car Decor</title>
-
-<meta name="description" content="Premium car accessories and customization in Pune by Sai Pratap Car Decor.">
+<meta name="description" content="Premium car accessories & customization in Pune by Sai Pratap Car Decor.">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- WhatsApp Floating Button -->
 <div class="whatsapp">
 <a href="https://wa.me/919823195752" target="_blank">💬</a>
 </div>
 
+<!-- HERO -->
 <header class="hero">
 <video autoplay muted loop class="bg-video">
 <source src="images/bg.mp4" type="video/mp4">
@@ -29,8 +30,10 @@
 </div>
 </header>
 
+<!-- SERVICES -->
 <section id="services" class="services">
 <h2>Premium Services</h2>
+
 <div class="cards">
 <div class="card" onclick="openService('detailing')">Car Detailing</div>
 <div class="card" onclick="openService('lighting')">Ambient Lighting</div>
@@ -41,25 +44,21 @@
 </div>
 </section>
 
-<!-- POPUP OVERLAY -->
+<!-- SERVICE POPUP -->
 <div class="overlay" id="overlay" onclick="closeService()">
 <div class="popup" onclick="event.stopPropagation()">
-
 <h2 id="serviceTitle"></h2>
-
 <img id="serviceImage">
-
 <p id="serviceText"></p>
-
 <a id="serviceWhatsapp" class="cta" target="_blank">Enquire on WhatsApp</a>
-
 <button class="close-btn" onclick="closeService()">✖ Close</button>
-
 </div>
 </div>
 
+<!-- GALLERY -->
 <section class="gallery">
 <h2>Transformations</h2>
+
 <div class="gallery-grid">
 <img src="images/car1.jpg">
 <img src="images/car2.jpg">
@@ -72,12 +71,14 @@
 </div>
 </section>
 
+<!-- STATS -->
 <section class="stats">
 <div>500+ Cars Customized</div>
 <div>300+ Happy Clients</div>
 <div>5+ Years Experience</div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
 <h2>Send Enquiry</h2>
 
