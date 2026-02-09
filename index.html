@@ -5,70 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Pratap Car Decor</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- EmailJS -->
 <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 </head>
 
 <body>
 
-<!-- WhatsApp Floating Button -->
 <div class="whatsapp">
 <a href="https://wa.me/91XXXXXXXXXX" target="_blank">💬</a>
 </div>
 
-<!-- HERO SECTION -->
 <header class="hero">
 <video autoplay muted loop class="bg-video">
-  <source src="images/bg.mp4" type="video/mp4">
+<source src="images/bg.mp4" type="video/mp4">
 </video>
 
 <div class="hero-content">
-  <h1>Sai Pratap Car Decor</h1>
-  <p>Luxury Car Customization & Accessories</p>
-  <button onclick="document.getElementById('contact').scrollIntoView()">
-    Get Premium Makeover
-  </button>
+<h1>Sai Pratap Car Decor</h1>
+<p>Luxury Car Customization & Accessories</p>
+<button onclick="document.getElementById('services').scrollIntoView()">Explore Services</button>
 </div>
 </header>
 
-<!-- SERVICES -->
-<section class="services">
+<section id="services" class="services">
 <h2>Premium Services</h2>
 <div class="cards">
-  <div class="card">Car Detailing & Polishing</div>
-  <div class="card">Ambient LED Lighting</div>
-  <div class="card">Audio Systems</div>
-  <div class="card">Car Wrapping</div>
-  <div class="card">Seat Covers & Dashboard Mods</div>
-  <div class="card">Accessories Installation</div>
+<div class="card" onclick="openService('detailing')">Car Detailing</div>
+<div class="card" onclick="openService('lighting')">Ambient Lighting</div>
+<div class="card" onclick="openService('audio')">Audio Systems</div>
+<div class="card" onclick="openService('wrapping')">Car Wrapping</div>
+<div class="card" onclick="openService('interior')">Seat Covers & Interior</div>
+<div class="card" onclick="openService('accessories')">Accessories</div>
 </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery">
-<h2>Before & After Transformations</h2>
+<!-- SERVICE POPUP -->
+<section class="service-popup" id="servicePopup">
+<div class="popup-content">
+<h2 id="serviceTitle"></h2>
+<img id="serviceImage">
+<p id="serviceText"></p>
+<a id="serviceWhatsapp" target="_blank" class="cta">Enquire on WhatsApp</a>
+<button onclick="closeService()">Close</button>
+</div>
+</section>
 
+<section class="gallery">
+<h2>Transformations</h2>
 <div class="gallery-grid">
-  <img src="images/car1.jpg">
-  <img src="images/car2.jpg">
-  <img src="images/car3.jpg">
+<img src="images/car1.jpg">
+<img src="images/car2.jpg">
+<img src="images/car3.jpg">
 </div>
 
 <div class="before-after">
-  <img src="images/before.jpg">
-  <img src="images/after.jpg" class="after">
+<img src="images/before.jpg">
+<img src="images/after.jpg" class="after">
 </div>
 </section>
 
-<!-- STATS -->
 <section class="stats">
 <div>500+ Cars Customized</div>
 <div>300+ Happy Clients</div>
 <div>5+ Years Experience</div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Send Enquiry</h2>
 
@@ -80,14 +80,12 @@
 </form>
 
 <h3>Visit Our Shop</h3>
-<iframe 
-src="https://www.google.com/maps?q=Sai%20Pratap%20Car%20Decor&output=embed">
-</iframe>
+<iframe src="https://www.google.com/maps?q=Sai%20Pratap%20Car%20Decor&output=embed"></iframe>
 
 <h3>Our Team</h3>
 <div class="team">
-  <div><strong>Pratap</strong><br>Founder</div>
-  <div><strong>Rahul</strong><br>Customization Expert</div>
+<div><strong>Pratap</strong><br>Founder</div>
+<div><strong>Rahul</strong><br>Customization Expert</div>
 </div>
 </section>
 
@@ -95,13 +93,12 @@ src="https://www.google.com/maps?q=Sai%20Pratap%20Car%20Decor&output=embed">
 
 <script src="script.js"></script>
 
-<!-- Scroll Reveal -->
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
-ScrollReveal().reveal('.card, .gallery-grid img, .stats div, .before-after', {
-  distance:'50px',
-  duration:800,
-  origin:'bottom'
+ScrollReveal().reveal('.card, .gallery-grid img, .stats div', {
+distance:'50px',
+duration:800,
+origin:'bottom'
 });
 </script>
 
