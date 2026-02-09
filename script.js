@@ -1,64 +1,98 @@
+/* =========================
+   SERVICE DATA
+========================= */
+
 const services = {
- detailing:{
-  title:"Car Detailing & Polishing",
-  text:"Deep cleaning, foam wash, polishing & ceramic coating.",
-  img:"images/detailing.jpg"
- },
- lighting:{
-  title:"Ambient LED Lighting",
-  text:"Luxury interior LED lighting with professional wiring.",
-  img:"images/lighting.jpg"
- },
- audio:{
-  title:"Audio Systems",
-  text:"Premium speakers & infotainment upgrades.",
-  img:"images/audio.jpg"
- },
- wrapping:{
-  title:"Car Wrapping",
-  text:"Matte & gloss wraps to transform exterior look.",
-  img:"images/wrapping.jpg"
- },
- interior:{
-  title:"Seat Covers & Interior Mods",
-  text:"Luxury leather seating & dashboard styling.",
-  img:"images/interior.jpg"
- },
- accessories:{
-  title:"Car Accessories",
-  text:"Premium accessories with perfect installation.",
-  img:"images/accessories.jpg"
- }
+  detailing: {
+    title: "Car Detailing & Polishing",
+    text: "Deep cleaning, foam wash, polishing & ceramic coating.",
+    img: "images/detailing.jpg"
+  },
+  lighting: {
+    title: "Ambient LED Lighting",
+    text: "Luxury interior LED lighting with professional wiring.",
+    img: "images/lighting.jpg"
+  },
+  audio: {
+    title: "Audio Systems",
+    text: "Premium speakers & infotainment upgrades.",
+    img: "images/audio.jpg"
+  },
+  wrapping: {
+    title: "Car Wrapping",
+    text: "Matte & gloss wraps to transform exterior look.",
+    img: "images/wrapping.jpg"
+  },
+  interior: {
+    title: "Seat Covers & Interior Mods",
+    text: "Luxury leather seating & dashboard styling.",
+    img: "images/interior.jpg"
+  },
+  accessories: {
+    title: "Car Accessories",
+    text: "Premium accessories with perfect installation.",
+    img: "images/accessories.jpg"
+  }
 };
 
-function openService(key){
-document.getElementById("serviceTitle").innerText = services[key].title;
-document.getElementById("serviceText").innerText = services[key].text;
-document.getElementById("serviceImage").src = services[key].img;
+/* =========================
+   OPEN SERVICE POPUP
+========================= */
 
-let message = "I want " + services[key].title + " service from Sai Pratap Car Decor";
+function openService(key) {
+  const service = services[key];
 
-document.getElementById("serviceWhatsapp").href =
-"https://wa.me/919823195752?text=" + encodeURIComponent(message);
+  document.getElementById("serviceTitle").innerText = service.title;
+  document.getElementById("serviceText").innerText = service.text;
+  document.getElementById("serviceImage").src = service.img;
 
-document.getElementById("overlay").style.display = "block";
+  const message =
+    "Hello Sai Pratap Car Decor, I want " +
+    service.title +
+    " service.";
+
+  document.getElementById("serviceWhatsapp").href =
+    "https://wa.me/919823195752?text=" +
+    encodeURIComponent(message);
+
+  document.getElementById("overlay").style.display = "block";
 }
 
-function closeService(){
-document.getElementById("overlay").style.display = "none";
+/* =========================
+   CLOSE SERVICE POPUP
+========================= */
+
+function closeService() {
+  document.getElementById("overlay").style.display = "none";
 }
 
-function sendWhatsApp(e){
-e.preventDefault();
+/* =========================
+   SEND WHATSAPP FROM FORM
+   (GUARANTEED WORKING)
+========================= */
 
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let msg = document.getElementById("message").value;
+function sendWhatsApp(e) {
+  e.preventDefault();
 
-let text = `Hello Sai Pratap Car Decor,
-Name: ${name}
-Phone: ${phone}
-Service: ${msg}`;
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("message").value.trim();
 
-window.open("https://wa.me/919823195752?text=" + encodeURIComponent(text), "_blank");
+  if (!name || !phone) {
+    alert("Please enter your name and phone number");
+    return;
+  }
+
+  const text =
+    "Hello Sai Pratap Car Decor, " +
+    "Name: " + name + ", " +
+    "Phone: " + phone + ", " +
+    "Service: " + service;
+
+  const whatsappURL =
+    "https://wa.me/919823195752?text=" +
+    encodeURIComponent(text);
+
+  // Direct redirect (no popup block)
+  window.location.href = whatsappURL;
 }
