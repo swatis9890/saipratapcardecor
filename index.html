@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sai Pratap Car Decor</title>
+
+<meta name="description" content="Sai Pratap Car Decor offers premium car accessories and customization services including detailing, ambient lighting, audio systems, wrapping and luxury interiors in Pune.">
+<meta name="keywords" content="car decor, car customization, car accessories, car detailing, ambient lighting, car wrapping Pune">
+<meta name="author" content="Sai Pratap Car Decor">
+
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +33,7 @@
 
 <section id="services" class="services">
 <h2>Premium Services</h2>
+
 <div class="cards">
 <div class="card" onclick="openService('detailing')">Car Detailing</div>
 <div class="card" onclick="openService('lighting')">Ambient Lighting</div>
@@ -38,19 +44,19 @@
 </div>
 </section>
 
-<!-- SERVICE POPUP -->
 <section class="service-popup" id="servicePopup">
 <div class="popup-content">
 <h2 id="serviceTitle"></h2>
 <img id="serviceImage">
 <p id="serviceText"></p>
-<a id="serviceWhatsapp" target="_blank" class="cta">Enquire on WhatsApp</a>
+<a id="serviceWhatsapp" class="cta" target="_blank">Enquire on WhatsApp</a>
 <button onclick="closeService()">Close</button>
 </div>
 </section>
 
 <section class="gallery">
 <h2>Transformations</h2>
+
 <div class="gallery-grid">
 <img src="images/car1.jpg">
 <img src="images/car2.jpg">
@@ -72,35 +78,27 @@
 <section id="contact" class="contact">
 <h2>Send Enquiry</h2>
 
-<form id="form">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<textarea name="message" placeholder="Service Required"></textarea>
-<button type="submit">Send Enquiry</button>
+<form onsubmit="sendWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<textarea id="message" placeholder="Service Required"></textarea>
+<button type="submit">Send via WhatsApp</button>
 </form>
+
+<p>📍 Serving premium car customization in Pune and nearby areas.</p>
 
 <h3>Visit Our Shop</h3>
 <iframe src="https://www.google.com/maps?q=Sai%20Pratap%20Car%20Decor&output=embed"></iframe>
 
 <h3>Our Team</h3>
 <div class="team">
-<div><strong>Pratap</strong><br>Founder</div>
-<div><strong>Rahul</strong><br>Customization Expert</div>
+<div><strong>GunjanKumar Dayashankar Singh</strong><br>Founder</div>
+<div><strong>Goodluck Gunjan Singh</strong><br>Customization Expert</div>
 </div>
 </section>
 
 <footer>© 2026 Sai Pratap Car Decor</footer>
 
 <script src="script.js"></script>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-ScrollReveal().reveal('.card, .gallery-grid img, .stats div', {
-distance:'50px',
-duration:800,
-origin:'bottom'
-});
-</script>
-
 </body>
 </html>
