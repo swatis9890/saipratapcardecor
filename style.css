@@ -18,3 +18,23 @@ z-index:2;
 text-align:center;
 padding-top:30vh;
 }
+.before-after{
+  position:relative;
+  max-width:600px;
+  margin:60px auto;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.before-after img{
+  width:100%;
+  display:block;
+}
+
+.after{
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  border-right:3px solid red;
+}
