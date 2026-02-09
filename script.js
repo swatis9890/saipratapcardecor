@@ -40,8 +40,7 @@ let message = "I want " + services[key].title + " service from Sai Pratap Car De
 let encoded = encodeURIComponent(message);
 
 document.getElementById("serviceWhatsapp").href =
-"https://wa.me/91XXXXXXXXXX?text=" + encoded;
-
+"https://wa.me/919876543210?text=" + encoded;
 
 document.getElementById("servicePopup").style.display="block";
 }
@@ -57,7 +56,10 @@ let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
 let msg = document.getElementById("message").value;
 
-let text = `Hello Sai Pratap Car Decor,%0AName: ${name}%0APhone: ${phone}%0AService: ${msg}`;
+let text = `Hello Sai Pratap Car Decor,
+Name: ${name}
+Phone: ${phone}
+Service: ${msg}`;
 
 window.open("https://wa.me/919823195752?text=" + encodeURIComponent(text), "_blank");
 }
