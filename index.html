@@ -6,8 +6,8 @@
 
 <title>Sai Pratap Car Decor</title>
 
-<meta name="description" content="Sai Pratap Car Decor offers premium car accessories and customization services including detailing, ambient lighting, audio systems, wrapping and luxury interiors in Pune.">
-<meta name="keywords" content="car decor, car customization, car accessories, car detailing, ambient lighting, car wrapping Pune">
+<meta name="description" content="Premium car accessories & customization in Pune — detailing, ambient lighting, audio systems, wrapping & interiors by Sai Pratap Car Decor.">
+<meta name="keywords" content="car decor Pune, car customization, car detailing, ambient lighting, car wrapping, accessories">
 <meta name="author" content="Sai Pratap Car Decor">
 
 <link rel="stylesheet" href="style.css">
@@ -15,10 +15,12 @@
 
 <body>
 
+<!-- Floating WhatsApp -->
 <div class="whatsapp">
-<a href="https://wa.me/919823195752" target="_blank">💬</a>
+<a href="https://wa.me/919876543210" target="_blank">💬</a>
 </div>
 
+<!-- HERO -->
 <header class="hero">
 <video autoplay muted loop class="bg-video">
 <source src="images/bg.mp4" type="video/mp4">
@@ -31,9 +33,9 @@
 </div>
 </header>
 
+<!-- SERVICES -->
 <section id="services" class="services">
 <h2>Premium Services</h2>
-
 <div class="cards">
 <div class="card" onclick="openService('detailing')">Car Detailing</div>
 <div class="card" onclick="openService('lighting')">Ambient Lighting</div>
@@ -44,6 +46,7 @@
 </div>
 </section>
 
+<!-- SERVICE POPUP -->
 <section class="service-popup" id="servicePopup">
 <div class="popup-content">
 <h2 id="serviceTitle"></h2>
@@ -54,9 +57,9 @@
 </div>
 </section>
 
+<!-- GALLERY -->
 <section class="gallery">
 <h2>Transformations</h2>
-
 <div class="gallery-grid">
 <img src="images/car1.jpg">
 <img src="images/car2.jpg">
@@ -69,12 +72,14 @@
 </div>
 </section>
 
+<!-- STATS -->
 <section class="stats">
 <div>500+ Cars Customized</div>
 <div>300+ Happy Clients</div>
 <div>5+ Years Experience</div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Send Enquiry</h2>
 
@@ -100,5 +105,16 @@
 <footer>© 2026 Sai Pratap Car Decor</footer>
 
 <script src="script.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+ScrollReveal().reveal('.card, .gallery-grid img, .stats div, .before-after', {
+distance:'60px',
+duration:900,
+origin:'bottom',
+interval:120
+});
+</script>
+
 </body>
 </html>
