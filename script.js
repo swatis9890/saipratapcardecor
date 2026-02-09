@@ -55,5 +55,5 @@ let msg = document.getElementById("message").value;
 
 let text = `Hello Sai Pratap Car Decor,%0AName: ${name}%0APhone: ${phone}%0AService: ${msg}`;
 
-window.open(`https://wa.me/91XXXXXXXXXX?text=${text}`, "_blank");
+window.open(`https://wa.me/919823195752?text=${text}`, "_blank");
 }
