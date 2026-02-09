@@ -1,46 +1,46 @@
 const services = {
  detailing:{
   title:"Car Detailing & Polishing",
-  text:"Complete deep cleaning, foam wash, polishing and ceramic coating for showroom finish.",
-  img:"images/detailing.jpg"
+  text:"Complete deep cleaning, foam wash, polishing and ceramic coating.",
+  video:"images/detailing.mp4"
  },
  lighting:{
   title:"Ambient LED Lighting",
-  text:"Luxury LED interior lighting with color modes and professional wiring.",
-  img:"images/lighting.jpg"
+  text:"Luxury LED lighting with professional installation.",
+  video:"images/lighting.mp4"
  },
  audio:{
   title:"Audio Systems",
   text:"Premium speakers, subwoofers and infotainment upgrades.",
-  img:"images/audio.jpg"
+  video:"images/audio.mp4"
  },
  wrapping:{
   title:"Car Wrapping",
-  text:"Matte, gloss and carbon wraps to fully transform your car look.",
-  img:"images/wrapping.jpg"
+  text:"Matte, gloss and carbon wraps for full transformation.",
+  video:"images/wrapping.mp4"
  },
  interior:{
   title:"Seat Covers & Interior Mods",
-  text:"Luxury leather seats, dashboard styling and comfort upgrades.",
-  img:"images/interior.jpg"
+  text:"Luxury leather seats and dashboard styling.",
+  video:"images/interior.mp4"
  },
  accessories:{
   title:"Car Accessories",
-  text:"Premium accessories professionally installed with perfect finish.",
-  img:"images/accessories.jpg"
+  text:"Premium accessories with perfect finish.",
+  video:"images/accessories.mp4"
  }
 };
 
 function openService(key){
-document.getElementById("serviceTitle").innerText = services[key].title;
-document.getElementById("serviceText").innerText = services[key].text;
-document.getElementById("serviceImage").src = services[key].img;
-document.getElementById("serviceWhatsapp").href =
-"https://wa.me/91XXXXXXXXXX?text=I%20want%20"+services[key].title;
+ document.getElementById("serviceTitle").innerText = services[key].title;
+ document.getElementById("serviceText").innerText = services[key].text;
 
-document.getElementById("servicePopup").style.display="block";
-}
+ let video = document.getElementById("serviceVideo");
+ video.src = services[key].video;
+ video.load();
 
-function closeService(){
-document.getElementById("servicePopup").style.display="none";
+ document.getElementById("serviceWhatsapp").href =
+ "https://wa.me/91XXXXXXXXXX?text=I%20want%20"+services[key].title;
+
+ document.getElementById("servicePopup").style.display="block";
 }
