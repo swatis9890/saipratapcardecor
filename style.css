@@ -1,61 +1,79 @@
 body{
 margin:0;
 font-family:Segoe UI,sans-serif;
-background:radial-gradient(circle,#111,#000);
+background:#000;
 color:white;
 }
 
 .hero{
 height:100vh;
 position:relative;
-overflow:hidden;
 }
 
 .bg-video{
-position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(.35);
+filter:brightness(.3);
 }
 
 .hero-content{
-position:relative;
-z-index:2;
+position:absolute;
+top:40%;
+width:100%;
 text-align:center;
-padding-top:30vh;
 }
 
 button,.cta{
-background:linear-gradient(45deg,red,#ff4d4d);
-border:none;
+background:red;
 padding:14px 30px;
+border:none;
 border-radius:30px;
 color:white;
 cursor:pointer;
-text-decoration:none;
 }
 
-section{
-padding:80px 20px;
+.sunfilm{
+padding:100px 20px;
 text-align:center;
+background:#111;
 }
 
-.cards{
+.sunfilm-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:900px;
+margin:auto;
 }
 
-.card{
-background:rgba(255,255,255,.08);
-padding:30px;
-border-radius:15px;
-cursor:pointer;
-transition:.3s;
+.sunfilm-grid img{
+width:100%;
+border-radius:20px;
 }
 
-.card:hover{transform:translateY(-10px);}
+.heat-meter{
+width:300px;
+margin:40px auto;
+background:#222;
+height:20px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.heat-bar{
+height:100%;
+width:0%;
+background:linear-gradient(to right,orange,red);
+transition:2s;
+}
+
+.temp-compare{
+display:flex;
+justify-content:center;
+gap:40px;
+font-size:22px;
+}
 
 .overlay{
 display:none;
@@ -64,64 +82,39 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.85);
-z-index:100;
+background:rgba(0,0,0,.8);
 }
 
 .popup{
-background:#111;
-max-width:420px;
+width:80%;
 margin:10% auto;
-padding:25px;
-border-radius:18px;
+}
+
+.popup video{
+width:100%;
+border-radius:20px;
+}
+
+.compare{
+padding:80px 20px;
 text-align:center;
 }
 
-.popup img{
-width:100%;
-max-height:180px;
-object-fit:cover;
-border-radius:12px;
-margin:12px 0;
-}
-
-.close-btn{
-margin-top:15px;
-background:#333;
-}
-
-.gallery-grid{
+.compare-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:800px;
+margin:auto;
 }
 
-.gallery-grid img{
-width:100%;
-border-radius:15px;
-}
+.good{background:#002200;padding:30px;border-radius:15px;}
+.bad{background:#330000;padding:30px;border-radius:15px;}
 
-.before-after{
-position:relative;
-max-width:600px;
-margin:50px auto;
-overflow:hidden;
-border-radius:15px;
-}
-
-.after{
-position:absolute;
-top:0;
-left:0;
-width:50%;
-border-right:3px solid red;
-}
-
-.stats{
-display:flex;
-justify-content:space-around;
+.legal{
+padding:60px;
 background:#111;
-font-size:22px;
+text-align:center;
 }
 
 .whatsapp{
@@ -129,28 +122,4 @@ position:fixed;
 bottom:20px;
 right:20px;
 font-size:40px;
-animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-50%{transform:scale(1.2);}
-}
-
-.contact input,.contact textarea{
-width:90%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:none;
-}
-
-.team{
-display:flex;
-justify-content:center;
-gap:40px;
-}
-
-footer{
-background:#000;
-padding:20px;
 }
