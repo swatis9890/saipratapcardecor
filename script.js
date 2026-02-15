@@ -96,3 +96,17 @@ function sendWhatsApp(e) {
   // Direct redirect (no popup block)
   window.location.href = whatsappURL;
 }
+
+// Animate heat meter on load
+window.onload = () => {
+  document.getElementById("heatBar").style.width = "85%";
+};
+
+function openReel(){
+  document.getElementById("reelOverlay").style.display="block";
+}
+
+function closeReel(){
+  document.getElementById("reelOverlay").style.display="none";
+}
+
