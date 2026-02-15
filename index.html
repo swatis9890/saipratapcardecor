@@ -3,100 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sai Pratap Car Decor</title>
-<meta name="description" content="Premium car accessories & customization in Pune by Sai Pratap Car Decor.">
+<title>New Sai Pratap Car Decor</title>
+<meta name="description" content="Premium car sun films & customization in Pune.">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- WhatsApp Floating Button -->
 <div class="whatsapp">
 <a href="https://wa.me/919823195752" target="_blank">💬</a>
 </div>
 
-<!-- HERO -->
 <header class="hero">
 <video autoplay muted loop class="bg-video">
 <source src="images/bg.mp4" type="video/mp4">
 </video>
-
 <div class="hero-content">
-<h1>Sai Pratap Car Decor</h1>
-<p>Luxury Car Customization & Accessories</p>
-<button onclick="document.getElementById('services').scrollIntoView()">Explore Services</button>
+<h1>New Sai Pratap Car Decor</h1>
+<p>Premium Sun Films & Luxury Car Customization</p>
+<button onclick="document.getElementById('sunfilm').scrollIntoView()">Explore Sun Film</button>
 </div>
 </header>
 
-<!-- SERVICES -->
-<section id="services" class="services">
-<h2>Premium Services</h2>
+<!-- PREMIUM SUN FILM SECTION -->
+<section id="sunfilm" class="sunfilm">
+<h2>Premium Heat Rejection Sun Films</h2>
 
-<div class="cards">
-<div class="card" onclick="openService('detailing')">Car Detailing</div>
-<div class="card" onclick="openService('lighting')">Ambient Lighting</div>
-<div class="card" onclick="openService('audio')">Audio Systems</div>
-<div class="card" onclick="openService('wrapping')">Car Wrapping</div>
-<div class="card" onclick="openService('interior')">Seat Covers & Interior</div>
-<div class="card" onclick="openService('accessories')">Accessories</div>
+<div class="sunfilm-grid">
+<img src="images/sunfilm.jpg">
+
+<div class="sunfilm-points">
+<p>✔ Blocks up to 99% UV rays</p>
+<p>✔ Reduces heat drastically</p>
+<p>✔ Protects interiors</p>
+<p>✔ Legal & clear visibility</p>
 </div>
+</div>
+
+<!-- HEAT METER -->
+<div class="heat-meter">
+<div class="heat-bar" id="heatBar"></div>
+<p>Heat Reduction Level</p>
+</div>
+
+<!-- TEMP GAUGE -->
+<div class="temp-compare">
+<div>Without Film: <strong>45°C+</strong></div>
+<div>With Our Film: <strong>30°C</strong></div>
+</div>
+
+<button class="cta" onclick="openReel()">Watch Installation Reel</button>
 </section>
 
-<!-- SERVICE POPUP -->
-<div class="overlay" id="overlay" onclick="closeService()">
+<!-- REEL POPUP -->
+<div class="overlay" id="reelOverlay" onclick="closeReel()">
 <div class="popup" onclick="event.stopPropagation()">
-<h2 id="serviceTitle"></h2>
-<img id="serviceImage">
-<p id="serviceText"></p>
-<a id="serviceWhatsapp" class="cta" target="_blank">Enquire on WhatsApp</a>
-<button class="close-btn" onclick="closeService()">✖ Close</button>
+<video src="images/bg.mp4" autoplay loop muted></video>
+<button onclick="closeReel()">Close</button>
 </div>
 </div>
 
-<!-- GALLERY -->
-<section class="gallery">
-<h2>Transformations</h2>
-
-<div class="gallery-grid">
-<img src="images/car1.jpg">
-<img src="images/car2.jpg">
-<img src="images/car3.jpg">
+<!-- COMPARISON -->
+<section class="compare">
+<h2>Premium Film vs Cheap Film</h2>
+<div class="compare-grid">
+<div class="good">
+<h3>Our Premium Film</h3>
+<p>✔ Heat protection</p>
+<p>✔ UV blocking</p>
+<p>✔ Long lasting</p>
+<p>✔ No bubbles</p>
 </div>
-
-<div class="before-after">
-<img src="images/before.jpg">
-<img src="images/after.jpg" class="after">
+<div class="bad">
+<h3>Cheap Film</h3>
+<p>❌ Fades fast</p>
+<p>❌ Low protection</p>
+<p>❌ Peels off</p>
+<p>❌ Poor clarity</p>
+</div>
 </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-<div>500+ Cars Customized</div>
-<div>300+ Happy Clients</div>
-<div>5+ Years Experience</div>
+<!-- LEGAL -->
+<section class="legal">
+<h2>100% Legal & Safe Sun Films</h2>
+<p>Our films comply with visibility norms, ensuring road safety while protecting you from heat and UV rays.</p>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-<h2>Send Enquiry</h2>
-
-<form onsubmit="sendWhatsApp(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Phone Number" required>
-<textarea id="message" placeholder="Service Required"></textarea>
-<button type="submit">Send via WhatsApp</button>
-</form>
-
-<h3>Our Team</h3>
-<div class="team">
-<div><strong>GunjanKumar Dayashankar Singh</strong><br>Founder</div>
-<div><strong>Goodluck Gunjan Singh</strong><br>Customization Expert</div>
-</div>
-</section>
-
-<footer>© 2026 Sai Pratap Car Decor</footer>
+<footer>© 2026 New Sai Pratap Car Decor</footer>
 
 <script src="script.js"></script>
 </body>
